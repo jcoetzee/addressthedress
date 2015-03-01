@@ -12,5 +12,6 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.less('app.less').version("css/app.css");
+    mix.less('app.less').version("css/app.css").
+    scripts(["bootstrap.js", "bootswatch.js", "jquery.magnific-popup.min.js"]);
 });

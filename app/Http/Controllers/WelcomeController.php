@@ -13,15 +13,6 @@ class WelcomeController extends Controller {
 	|
 	*/
 
-	/**
-	 * Create a new controller instance.
-	 *
-	 * @return void
-	 */
-	public function __construct()
-	{
-		$this->middleware('guest');
-	}
 
 	/**
 	 * Show the application welcome screen to the user.
@@ -30,7 +21,18 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('welcome');
+        $colour = mt_rand(0,1) == 0 ? 'white' : 'black';
+
+        \Session::put(compact('colour'));
+
+        $magnific = 'css/magnific-popup-' . $colour . '.css';
+
+		return view('welcome', compact('magnific'));
 	}
+
+    public function post()
+    {
+
+    }
 
 }
