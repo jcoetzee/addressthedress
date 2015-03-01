@@ -23,16 +23,14 @@ class WelcomeController extends Controller {
 	{
         $colour = mt_rand(0,1) == 0 ? 'white' : 'black';
 
-        \Session::put(compact('colour'));
+        \Session::flash('colour', $colour);
 
-        $magnific = 'css/magnific-popup-' . $colour . '.css';
-
-		return view('welcome', compact('magnific'));
+		return view('welcome', compact('colour'));
 	}
 
     public function post()
     {
-
+        dd(\Input::all());
     }
 
 }

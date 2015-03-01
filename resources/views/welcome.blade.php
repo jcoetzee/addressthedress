@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <link href="{{ elixir("css/app.css") }}" rel="stylesheet">
-    <link href="{{asset($magnific)}}" rel="stylesheet">
+    <link href="{{asset('css/magnific-popup.css')}}" rel="stylesheet">
+
+    <style>
+        .mfp-bg {
+            background: {{$colour}};
+        }
+    </style>
 
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png"/>
@@ -18,8 +24,8 @@
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
-    <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script>
         (function (i, s, o, g, r, a, m) {
@@ -138,15 +144,13 @@
                             <div class="col-lg-8">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="gender" id="male" value="male"
-                                               checked="">
+                                        <input type="radio" name="gender" value="male">
                                         Male
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="gender" id="female"
-                                               value="female">
+                                        <input type="radio" name="gender" value="female">
                                         Female
                                     </label>
                                 </div>
@@ -158,6 +162,25 @@
 
                             <div class="col-lg-8">
                                 <input type="number" class="form-control" name="age" placeholder="Age">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">Left or Right Handed?</label>
+
+                            <div class="col-lg-8">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="handedness" value="right">
+                                        Right
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="handedness" value="left">
+                                        Left
+                                    </label>
+                                </div>
                             </div>
                         </div>
 
@@ -209,7 +232,7 @@
                             <div class="col-lg-8">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="seen_before" value="no" checked="">
+                                        <input type="radio" name="seen_before" value="no">
                                         No
                                     </label>
                                 </div>
@@ -300,27 +323,13 @@
 </div>
 
 
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="{{asset('js/all.js')}}"></script>
 
 
 <script>
     $(document).ready(function () {
         $('#banner').height($(window).height());
-
-
-        $('#location').click(function () {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                console.log("Geolocation is not supported by this browser.");
-            }
-        });
-
-
-        function showPosition(position) {
-            console.log(SunCalc.getTimes(new Date(), position.coords.latitude, position.coords.longitude));
-        }
 
         var theDress = $('#thedress');
         theDress.magnificPopup({
@@ -340,6 +349,8 @@
                 $('.seen-before-questions').hide()
             }
         });
+
+        $('select').prop("selectedIndex", -1)
     });
 </script>
 

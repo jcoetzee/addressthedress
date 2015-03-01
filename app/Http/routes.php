@@ -13,6 +13,4 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::post('/', function(){
-    dd(\Request::all());
-});
+Route::post('/', 'WelcomeController@post');
