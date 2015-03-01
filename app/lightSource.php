@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class lightSource extends Model {
+class LightSource extends Model {
 
     public $timestamps = false;
 

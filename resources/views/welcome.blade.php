@@ -56,6 +56,8 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
+@include('flash::message')
+
 <div class="container">
 
     <div class="page-header" id="banner">
@@ -134,11 +136,11 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-9 col-lg-offset-1">
+            <div class="col-lg-10">
                 <div class="well bs-component">
                     {!! Form::open(['class' => "form-horizontal"]) !!}
                     <fieldset>
-                        <div class="form-group">
+                        <div class="form-group required">
                             <label class="col-lg-4 control-label">Gender</label>
 
                             <div class="col-lg-8">
@@ -157,7 +159,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group required">
                             <label class="col-lg-4 control-label">Age</label>
 
                             <div class="col-lg-8">
@@ -165,7 +167,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group required">
                             <label class="col-lg-4 control-label">Left or Right Handed?</label>
 
                             <div class="col-lg-8">
@@ -226,7 +228,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group required">
                             <label class="col-lg-4 control-label">Have you seen #TheDress before</label>
 
                             <div class="col-lg-8">
@@ -245,7 +247,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group seen-before-questions" hidden>
+                        <div class="form-group seen-before-questions required" hidden>
                             <label class="col-lg-4 control-label">What colour was it the first time you
                                 saw it?</label>
 
@@ -257,7 +259,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group seen-before-questions" hidden>
+                        <div class="form-group seen-before-questions required" hidden>
                             <label class="col-lg-4 control-label">Have the colours ever
                                 changed?</label>
 
@@ -276,7 +278,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group required">
                             <label class="col-lg-4 control-label">What colour was the dress?</label>
 
                             <div class="col-lg-8">
@@ -287,7 +289,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group required">
+                            <label class="col-lg-4 control-label"></label>
                             <div class="col-lg-8 col-lg-offset-4">
                                 {!! Recaptcha::render() !!}
                             </div>
@@ -348,6 +351,8 @@
         });
 
         $('select').prop("selectedIndex", -1)
+
+        $('#flash-overlay-modal').modal();
     });
 </script>
 

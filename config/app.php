@@ -146,7 +146,8 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
-        'Greggilbert\Recaptcha\RecaptchaServiceProvider'
+        'Greggilbert\Recaptcha\RecaptchaServiceProvider',
+        'Laracasts\Flash\FlashServiceProvider'
 
 	],
 
@@ -197,7 +198,8 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
         'Form'      => 'Illuminate\Html\FormFacade',
         'Html'      => 'Illuminate\Html\HtmlFacade',
-        'Recaptcha' => 'Greggilbert\Recaptcha\Facades\Recaptcha'
+        'Recaptcha' => 'Greggilbert\Recaptcha\Facades\Recaptcha',
+        'Flash'     => 'Laracasts\Flash\Flash'
 
 	],
 

@@ -1,9 +1,10 @@
 <?php namespace App\Http\Controllers;
 
-use App\lightSource;
-use App\Response;
+use App\LightSource;
+use App\SurveyResponse;
 use Input;
 use Session;
+use Flash;
 
 class WelcomeController extends Controller
 {
@@ -36,15 +37,17 @@ class WelcomeController extends Controller
 
     public function post()
     {
-        $input = array_add(Input::except('_token', 'light_source', 'g-recaptcha-response'), 'background_colour', Session::get('colour'));
+        $input = Input::except('_token', 'light_source', 'g-recaptcha-response');
 
-        $response = new Response($input);
+        $response = new SurveyResponse(array_add($input, 'background_colour', Session::get('colour')));
 
-//        dd(lightSource::where('name', Input::get('light_source')));
-
-        $response->lightSource()->associate(lightSource::where('name', Input::get('light_source'))->first());
+        $response->lightSource()->associate(LightSource::where('name', Input::get('light_source'))->first());
 
         $response->save();
+
+        Flash::overlay('Thanks for participating, please tell your friends about this project and/or share on social networks so we can get lots of data!', 'Thanks!');
+
+        return redirect('/');
     }
 
 }
