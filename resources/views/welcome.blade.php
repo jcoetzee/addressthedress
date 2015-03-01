@@ -219,9 +219,9 @@
 
                             <div class="col-lg-8">
                                 <select class="form-control" name="brightness">
-                                    <option value="bright">Bright</option>
-                                    <option value="average">Average</option>
-                                    <option value="dark">Dark</option>
+                                    <option value="2">Bright</option>
+                                    <option value="1">Average</option>
+                                    <option value="0">Dark</option>
                                 </select>
                             </div>
                         </div>
@@ -232,13 +232,13 @@
                             <div class="col-lg-8">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="seen_before" value="no">
+                                        <input type="radio" name="seen_before" value="0">
                                         No
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="seen_before" value="yes">
+                                        <input type="radio" name="seen_before" value="1">
                                         Yes
                                     </label>
                                 </div>
@@ -250,7 +250,7 @@
                                 saw it?</label>
 
                             <div class="col-lg-8">
-                                <select class="form-control" name="firstTime">
+                                <select class="form-control" name="first_time_colour">
                                     <option value="blue_black">Blue and Black/Brown</option>
                                     <option value="white_gold">White and Gold</option>
                                 </select>
@@ -263,8 +263,8 @@
 
                             <div class="col-lg-8">
                                 <select class="form-control" name="colours_changed">
-                                    <option value="no">No</option>
-                                    <option value="yes">Yes</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
                                 </select>
                             </div>
                         </div>
@@ -307,15 +307,12 @@
 
     <footer>
         <div class="row">
-            <div class="col-lg-10">
+            <div class="col-lg-6">
                 <p>© <a href="http://www.twitter.com/jonocoetzee" rel="nofollow">Jonathan Coetzee</a></p>
-
-                <p>Template by <a href="http://thomaspark.me" rel="nofollow">Thomas Park</a></p>
             </div>
-            <div class="col-lg-2">
-
+            <div class="col-lg-6">
                 <ul class="list-unstyled">
-                    <li class="pull-right"><a href="#top">Back to top</a></li>
+                    <li class="pull-right"><p>Template by <a href="http://thomaspark.me" rel="nofollow">Thomas Park</a></p></li>
                 </ul>
             </div>
         </div>
@@ -343,7 +340,7 @@
         });
 
         $("input[name$='seen_before']").click(function () {
-            if ($(this).val() === 'yes') {
+            if ($(this).val() == 1) {
                 $('.seen-before-questions').show()
             } else {
                 $('.seen-before-questions').hide()
