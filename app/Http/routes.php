@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'SurveyController@index');
 
-Route::post('/', 'WelcomeController@post');
+Route::post('/', 'SurveyController@post');

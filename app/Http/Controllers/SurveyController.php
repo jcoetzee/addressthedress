@@ -1,12 +1,12 @@
 <?php namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateResponseRequest;
 use App\LightSource;
 use App\SurveyResponse;
-use Input;
-use Session;
 use Flash;
+use Session;
 
-class WelcomeController extends Controller
+class SurveyController extends Controller
 {
 
     /*
@@ -35,13 +35,13 @@ class WelcomeController extends Controller
         return view('welcome', compact('colour'));
     }
 
-    public function post()
+    public function post(CreateResponseRequest $request)
     {
-        $input = Input::except('_token', 'light_source', 'g-recaptcha-response');
+        $input = $request->except('_token', 'light_source', 'g-recaptcha-response');
 
         $response = new SurveyResponse(array_add($input, 'background_colour', Session::get('colour')));
 
-        $response->lightSource()->associate(LightSource::where('name', Input::get('light_source'))->first());
+        $response->lightSource()->associate(LightSource::where('name', $request->get('light_source'))->firstOrFail());
 
         $response->save();
 

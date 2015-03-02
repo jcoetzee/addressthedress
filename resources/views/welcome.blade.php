@@ -5,7 +5,7 @@
     <title>Address #TheDress</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <link href="{{ asset("css/app.css") }}" rel="stylesheet">
+    <link href="{{ elixir("css/app.css") }}" rel="stylesheet">
     <link href="{{asset('css/magnific-popup.css')}}" rel="stylesheet">
 
     <style>
@@ -119,7 +119,6 @@
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -191,6 +190,7 @@
 
                             <div class="col-lg-8">
                                 <select class="form-control" name="eye_colour">
+                                    <option selected disabled hidden value=''></option>
                                     <option value="brown">Brown</option>
                                     <option value="hazel">Hazel</option>
                                     <option value="blue">Blue</option>
@@ -206,6 +206,7 @@
 
                             <div class="col-lg-8">
                                 <select class="form-control" name="light_source">
+                                    <option selected disabled hidden value=''></option>
                                     <option value="sunrise">Sunrise/Sunset</option>
                                     <option value="incandescent">Incandescent/Tungsten/Soft CCFL</option>
                                     <option value="florescent">Cool White CCFL/Florescent</option>
@@ -221,6 +222,7 @@
 
                             <div class="col-lg-8">
                                 <select class="form-control" name="brightness">
+                                    <option selected disabled hidden value=''></option>
                                     <option value="2">Bright</option>
                                     <option value="1">Average</option>
                                     <option value="0">Dark</option>
@@ -253,6 +255,7 @@
 
                             <div class="col-lg-8">
                                 <select class="form-control" name="first_time_colour">
+                                    <option selected disabled hidden value=''></option>
                                     <option value="blue_black">Blue and Black/Brown</option>
                                     <option value="white_gold">White and Gold</option>
                                 </select>
@@ -265,6 +268,7 @@
 
                             <div class="col-lg-8">
                                 <select class="form-control" name="colours_changed">
+                                    <option selected disabled hidden value=''></option>
                                     <option value="0">No</option>
                                     <option value="1">Yes</option>
                                 </select>
@@ -283,6 +287,7 @@
 
                             <div class="col-lg-8">
                                 <select class="form-control" id="colour_seen" name="colour_seen" disabled>
+                                    <option selected disabled hidden value=''></option>
                                     <option value="blue_black">Blue and Black/Brown</option>
                                     <option value="white_gold">White and Gold</option>
                                 </select>
@@ -350,7 +355,7 @@
             }
         });
 
-        $('select').prop("selectedIndex", -1)
+//        $('select').prop("selectedIndex", -1)
 
         $('#flash-overlay-modal').modal();
     });
