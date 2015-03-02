@@ -108,7 +108,7 @@
                         <p>You may or may not have been completely bombarded with a picture of a certain dress that has
                             been making the rounds on Twitter and the Internet in general, if you have then please stay
                             with me for just a few minutes longer. If you have no idea what I’m talking about then this
-                            actually a good thing since you wont have a bias or presupposition of what you should
+                            is actually a good thing since you wont have a bias or presupposition of what you should
                             see.</p>
 
                         <p>My name is Jonathan Coetzee. I am an aspiring Data Scientist and I’m very curious as to why
@@ -224,7 +224,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="col-lg-4 control-label">Dominant Light Source</label>
+                            <label class="col-lg-4 control-label">Current Room Light Source</label>
 
                             <div class="col-lg-8">
                                 <select class="form-control" name="light_source">
@@ -340,7 +340,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <ul class="list-unstyled">
-                    <li><p><a href="http://addressthedress.com/">AdressTheDress.com</a> © <a
+                    <li><p><a href="http://addressthedress.com/">AddressTheDress.com</a> © <a
                                     href="http://www.twitter.com/jonocoetzee" rel="nofollow">Jonathan Coetzee</a></p>
                     </li>
                     <li><p>Template by <a href="http://thomaspark.me" rel="nofollow">Thomas Park</a>
@@ -351,10 +351,8 @@
     </footer>
 </div>
 
-
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="{{asset('js/all.js')}}"></script>
-
 
 <script>
     $(document).ready(function () {
@@ -376,13 +374,11 @@
         $("#flash-overlay-modal").modal()
 
         @if ($errors->any())
-        $('html, body').animate({
-            scrollTop: $("#survey").offset().top
-        }, 1000);
+        $("html, body").animate({scrollTop: $("#survey").offset().top}, 1E3);
         @endif
+
 
     });
 </script>
-
 </body>
 </html>
