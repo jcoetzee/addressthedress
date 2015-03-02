@@ -43,18 +43,17 @@
         ga('create', 'UA-60214528-1', 'auto');
         ga('send', 'pageview');
     </script>
+
+    <script type="text/javascript">var switchTo5x = true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({
+            publisher: "f8ef1e84-6868-4229-af87-d3f6226c3b2a",
+            doNotHash: true,
+            doNotCopy: true,
+            hashAddressBar: true
+        });</script>
 </head>
 <body>
-
-<div id="fb-root"></div>
-<script>(function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
 
 @include('flash::message')
 
@@ -69,21 +68,30 @@
             </p>
 
             <p class="lead"><strong>I want to find out why!</strong></p>
+
+            <p>
+                <span class='st_facebook_hcount' displayText='Facebook'></span>
+                <span class='st_twitter_hcount' displayText='Tweet'></span>
+                <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+                <span class='st_pinterest_hcount' displayText='Pinterest'></span>
+                <span class='st_email_hcount' displayText='Email'></span>
+            </p>
+
+            <p>
+                <a href="https://twitter.com/JonoCoetzee" class="twitter-follow-button"
+                   data-show-count="false">Follow @JonoCoetzee</a>
+                <script>!function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = p + '://platform.twitter.com/widgets.js';
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, 'script', 'twitter-wjs');</script>
+            </p>
         </div>
 
-        <div class="share">
-            <div class="fb-share-button" data-href="{{url()}}" data-layout="button_count"></div>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-via="JonoCoetzee">Tweet</a>
-            <script>!function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                    if (!d.getElementById(id)) {
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = p + '://platform.twitter.com/widgets.js';
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }
-                }(document, 'script', 'twitter-wjs');</script>
-        </div>
     </div>
 
     <!-- Navbar
@@ -96,26 +104,30 @@
                 </div>
 
                 <div class="bs-component">
-                    <div class="col-lg-11">
+                    <div class="col-lg-9">
                         <p>You may or may not have been completely bombarded with a picture of a certain dress that has
-                            been making the rounds on Twitter and the Internet in general. If you don't know what I'm
-                            talking about the please read on especially, I need your unbiased virgin eyes!</p>
+                            been making the rounds on Twitter and the Internet in general, if you have then please stay
+                            with me for just a few minutes longer. If you have no idea what I’m talking about then this
+                            actually a good thing since you wont have a bias or presupposition of what you should
+                            see.</p>
 
-                        <p>My name is Jonathan Coetzee, an aspiring Data Scientist, and more than anything right now I
-                            want to know why two people can be looking at the same picture and see completely different
-                            things! Now I am no neuroscientist, the cause of the phenomenon may be dependent on the
-                            wiring of our individual brains. That being said I really love to gather a whole bunch of
-                            data to see if maybe a certain lighting environment or other factor presupposes us one way
-                            or the other.</p>
+                        <p>My name is Jonathan Coetzee. I am an aspiring Data Scientist and I’m very curious as to why
+                            two people can see such different colours when looking at the same picture. This curiosity
+                            is the reason why I made this site. Here I hope to obtain enough data from many different
+                            people in the hopes of finding patterns that make people’s brains “fix” the colours one way
+                            or the other. I am no neuroscientist however; the cause of the phenomenon may be entirely
+                            dependent on the wiring of our individual brains. Even if we find no conclusive correlations
+                            between the questions below and the colours perceived, we will still have learnt something,
+                            as we will then know to look elsewhere.</p>
 
                         <p><strong>To data scientists:</strong></p>
 
-                        <p>I am not a data scientist, although it is a field I'm trying hard to get into. I have a very
-                            small set of skills available to me at the moment. All the data collected in this survey
-                            will be hosted publicly on the
+                        <p>I am not a data scientist, although it is a field I'm trying hard to get into and in the
+                            process of teaching myself. I have a small set of skills available to me at the moment. All
+                            the data collected in this survey will be hosted publicly on the
                             <a href="https://github.com/jcoetzee/addressthedress" target="_blank">Github</a> project,
-                            please grab it, take a look and let me know what you find! I see this as a learning
-                            experience.
+                            released under the Creative Commons licence. Please grab it, see what you can find, and share
+                            the results!
                         </p>
                     </div>
                 </div>
@@ -139,6 +151,15 @@
                 <div class="well bs-component">
                     {!! Form::open(['class' => "form-horizontal"]) !!}
                     <fieldset>
+                        @if ($errors->any())
+                            <ul class="alert alert-danger">
+
+                                @foreach($errors->all() as $error)
+                                    <li>{{$error}}</li>
+                                @endforeach
+                            </ul>
+                        @endif
+
                         <div class="form-group required">
                             <label class="col-lg-4 control-label">Gender</label>
 
@@ -296,6 +317,7 @@
 
                         <div class="form-group required">
                             <label class="col-lg-4 control-label"></label>
+
                             <div class="col-lg-8 col-lg-offset-4">
                                 {!! Recaptcha::render() !!}
                             </div>
@@ -315,12 +337,13 @@
 
     <footer>
         <div class="row">
-            <div class="col-lg-6">
-                <p>© <a href="http://www.twitter.com/jonocoetzee" rel="nofollow">Jonathan Coetzee</a></p>
-            </div>
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <ul class="list-unstyled">
-                    <li class="pull-right"><p>Template by <a href="http://thomaspark.me" rel="nofollow">Thomas Park</a></p></li>
+                    <li><p><a href="http://addressthedress.com/">AdressTheDress.com</a> © <a
+                                    href="http://www.twitter.com/jonocoetzee" rel="nofollow">Jonathan Coetzee</a></p>
+                    </li>
+                    <li><p>Template by <a href="http://thomaspark.me" rel="nofollow">Thomas Park</a>
+                        </p></li>
                 </ul>
             </div>
         </div>
@@ -354,8 +377,6 @@
                 $('.seen-before-questions').hide()
             }
         });
-
-//        $('select').prop("selectedIndex", -1)
 
         $('#flash-overlay-modal').modal();
     });
