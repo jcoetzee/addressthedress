@@ -34,11 +34,9 @@ class SurveyController extends Controller
 
         return view('survey', compact('colour'));
     }
-    
+
     public function post(CreateResponseRequest $request)
     {
-        dd($request->all());
-
         $input = $request->except('_token', 'light_source', 'g-recaptcha-response');
 
         $response = new SurveyResponse(array_add($input, 'background_colour', Session::get('colour')));
