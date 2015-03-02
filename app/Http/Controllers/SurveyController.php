@@ -32,7 +32,7 @@ class SurveyController extends Controller
 
         Session::flash('colour', $colour);
 
-        return view('welcome', compact('colour'));
+        return view('survey', compact('colour'));
     }
 
     public function post(CreateResponseRequest $request)
@@ -45,7 +45,7 @@ class SurveyController extends Controller
 
         $response->save();
 
-        Flash::overlay('Thanks for participating, please tell your friends about this project and/or share on social networks so we can get lots of data!', 'Thanks!');
+        Flash::overlay('Thanks for you time, please consider telling your friends about Address #TheDress and/or sharing on social networks, the more data we get the better.', 'Response Captured');
 
         return redirect('/');
     }

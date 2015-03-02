@@ -5,7 +5,7 @@
     <title>Address #TheDress</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <link href="{{ elixir("css/all.css") }}" rel="stylesheet">
+    <link href="/css/all.css" rel="stylesheet">
 
     <style>
         .mfp-bg {
@@ -130,8 +130,6 @@
         </div>
     </div>
 
-    <!-- Forms
-    ================================================== -->
     <div class="bs-docs-section">
         <div class="row">
             <div class="col-lg-12">
@@ -293,7 +291,7 @@
 
                         <div class="form-group">
                             <div class="col-lg-8 col-lg-offset-4">
-                                <a id="thedress" class="btn btn-info" href="{{asset('images/the_dress.jpg')}}">Show
+                                <a id="thedress" class="btn btn-info" href="/images/the_dress.jpg">Show
                                     Picture</a>
                             </div>
                         </div>
@@ -347,8 +345,9 @@
     </footer>
 </div>
 
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="{{asset('js/all.js')}}"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
 
 <script>
     $(document).ready(function () {

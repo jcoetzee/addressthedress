@@ -24,7 +24,7 @@ class CreateResponseRequest extends Request
     {
         $rules = [
             'gender' => ['required', 'in:male,female'],
-            'age' => ['required', 'min:0', 'max:150'],
+            'age' => ['required', 'integer', 'min:0', 'max:150'],
             'handedness' => ['required', 'in:left,right,ambidextrous'],
             'eye_colour' => ['in:brown,hazel,blue,green,grey,amber,other'],
             'light_source' => ['in:sunrise,incandescent,florescent,daylight,cloudy,shade'],
