@@ -26,7 +26,7 @@ class CreateResponseRequest extends Request
             'gender' => ['required', 'in:male,female'],
             'age' => ['required', 'min:0', 'max:150'],
             'handedness' => ['required', 'in:left,right,ambidextrous'],
-            'eye_colour' => ['in:brown,hazel,blue,green,grey,amber'],
+            'eye_colour' => ['in:brown,hazel,blue,green,grey,amber,other'],
             'light_source' => ['in:sunrise,incandescent,florescent,daylight,cloudy,shade'],
             'brightness' => ['integer', 'min:0', 'max:2'],
             'seen_before' => ['required', 'integer', 'min:0', 'max:1'],

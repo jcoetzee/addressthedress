@@ -153,7 +153,7 @@
                     {!! Form::open(['class' => "form-horizontal"]) !!}
                     <fieldset>
                         @if ($errors->any())
-                            <ul class="alert alert-danger">
+                            <ul class="alert alert-danger list-unstyled">
 
                                 @foreach($errors->all() as $error)
                                     <li>{{$error}}</li>
@@ -219,6 +219,7 @@
                                     <option value="green">Green</option>
                                     <option value="grey">Grey</option>
                                     <option value="amber">Amber</option>
+                                    <option value="other">Other</option>
                                 </select>
                             </div>
                         </div>
@@ -376,8 +377,6 @@
         @if ($errors->any())
         $("html, body").animate({scrollTop: $("#survey").offset().top}, 1E3);
         @endif
-
-
     });
 </script>
 </body>
