@@ -100,7 +100,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="page-header">
-                    <h2 id="navbar">About</h2>
+                    <h2>About</h2>
                 </div>
 
                 <div class="bs-component">
@@ -142,7 +142,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="page-header">
-                    <h2 id="forms">Survey</h2>
+                    <h2 id="survey">Survey</h2>
                 </div>
             </div>
         </div>
@@ -358,33 +358,29 @@
 
 <script>
     $(document).ready(function () {
-        $('#banner').height($(window).height());
-
-        var theDress = $('#thedress');
-        theDress.magnificPopup({
-            type: 'image',
-            closeOnContentClick: true
-        });
-
-        theDress.click(function () {
-            var colourSeen = $('#colour_seen'), placeholder = colourSeen.find('option:first');
-            
-            placeholder.text('');
-            placeholder.prop('hidden', true);
-
-            colourSeen.prop('disabled', false);
-            $('#submit').prop('disabled', false);
-        });
-
+        $("#banner").height($(window).height());
+        (function () {
+            var a = $("#thedress");
+            a.magnificPopup({type: "image", closeOnContentClick: !0});
+            a.click(function () {
+                var a = $("#colour_seen"), b = a.find("option:first");
+                b.text("");
+                b.prop("hidden", !0);
+                a.prop("disabled", !1);
+                $("#submit").prop("disabled", !1)
+            })
+        })();
         $("input[name$='seen_before']").click(function () {
-            if ($(this).val() == 1) {
-                $('.seen-before-questions').show()
-            } else {
-                $('.seen-before-questions').hide()
-            }
+            1 == $(this).val() ? $(".seen-before-questions").show() : $(".seen-before-questions").hide()
         });
+        $("#flash-overlay-modal").modal()
 
-        $('#flash-overlay-modal').modal();
+        @if ($errors->any())
+        $('html, body').animate({
+            scrollTop: $("#survey").offset().top
+        }, 1000);
+        @endif
+
     });
 </script>
 
