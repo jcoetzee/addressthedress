@@ -5,14 +5,15 @@
     <title>Address #TheDress</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="Finding reasons why #TheDress is both #BlackAndBlue and #WhiteAndGold">
+    <meta name="keywords" content="#TheDress,#BlackAndBlue,#WhiteAndGold,Survey,Data Science">
+    <meta name="author" content="Jonathan Coetzee">
     <link href="{{elixir('css/all.css')}}" rel="stylesheet">
-
     <style>
         .mfp-bg {
             background: {{$colour}};
         }
     </style>
-
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png"/>
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
@@ -20,7 +21,6 @@
     <meta name="application-name" content="#TheDress"/>
     <meta name="msapplication-TileColor" content="#FFFFFF"/>
     <meta name="msapplication-TileImage" content="mstile-144x144.png"/>
-
     <!--[if lt IE 9]>
     <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -37,11 +37,9 @@
             a.src = g;
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
         ga('create', 'UA-60214528-1', 'auto');
         ga('send', 'pageview');
     </script>
-
     <script type="text/javascript">var switchTo5x = true;</script>
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({
@@ -49,14 +47,12 @@
             doNotHash: true,
             doNotCopy: true,
             hashAddressBar: true
-        });</script>
+        });
+    </script>
 </head>
 <body>
-
 @include('flash::message')
-
 <div class="container">
-
     <div class="page-header" id="banner">
         <div class="row">
             <h1>Address #TheDress</h1>
@@ -75,9 +71,8 @@
                 <span class='st_email_hcount' displayText='Email'></span>
             </p>
 
-            <p>
-                <a href="https://twitter.com/JonoCoetzee" class="twitter-follow-button"
-                   data-show-count="false">Follow @JonoCoetzee</a>
+            <p><a href="https://twitter.com/JonoCoetzee" class="twitter-follow-button"
+                  data-show-count="false">Follow @JonoCoetzee</a>
                 <script>!function (d, s, id) {
                         var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
                         if (!d.getElementById(id)) {
@@ -90,14 +85,12 @@
             </p>
         </div>
     </div>
-
     <div class="bs-docs-section clearfix">
         <div class="row">
             <div class="col-lg-12">
                 <div class="page-header">
                     <h2>About</h2>
                 </div>
-
                 <div class="bs-component">
                     <div class="col-lg-9">
                         <p>You may or may not have been completely bombarded with a picture of a certain dress that has
@@ -129,7 +122,6 @@
             </div>
         </div>
     </div>
-
     <div class="bs-docs-section">
         <div class="row">
             <div class="col-lg-12">
@@ -138,7 +130,6 @@
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-lg-10">
                 <div class="well bs-component">
@@ -151,7 +142,6 @@
                                 @endforeach
                             </ul>
                         @endif
-
                         <div class="form-group required">
                             <label class="col-lg-4 control-label">Gender</label>
 
@@ -172,7 +162,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="form-group required">
                             <label class="col-lg-4 control-label">Age</label>
 
@@ -180,7 +169,6 @@
                                 <input type="number" class="form-control" name="age" placeholder="Age">
                             </div>
                         </div>
-
                         <div class="form-group required">
                             <label class="col-lg-4 control-label">Left or Right Handed?</label>
 
@@ -201,7 +189,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label class="col-lg-4 control-label">Eye Colour</label>
 
@@ -251,26 +238,11 @@
                                     </label>
                                 </div>
                             </div>
-
-                            {{--<div class="col-lg-8">--}}
-                            {{--<select class="form-control" name="eye_colour">--}}
-                            {{--<option selected disabled hidden value=''></option>--}}
-                            {{--<option value="brown">Brown</option>--}}
-                            {{--<option value="hazel">Hazel</option>--}}
-                            {{--<option value="blue">Blue</option>--}}
-                            {{--<option value="green">Green</option>--}}
-                            {{--<option value="grey">Grey</option>--}}
-                            {{--<option value="amber">Amber</option>--}}
-                            {{--<option value="other">Other</option>--}}
-                            {{--</select>--}}
-                            {{--</div>--}}
                         </div>
-
                         <div class="form-group">
                             <label class="col-lg-4 control-label">Current Room Light Source</label>
 
                             <div class="col-lg-3">
-
                                 <div class="radio">
                                     <label>
                                         <input type="radio" name="light_source" value="sunrise">
@@ -309,19 +281,8 @@
                                         Shade or Heavily Overcast
                                     </label>
                                 </div>
-
-                                {{--<select class="form-control" name="light_source">--}}
-                                {{--<option selected disabled hidden value=''></option>--}}
-                                {{--<option value="sunrise">Sunrise/Sunset</option>--}}
-                                {{--<option value="incandescent">Incandescent/Tungsten/Soft CCFL</option>--}}
-                                {{--<option value="florescent">Cool White CCFL/Florescent</option>--}}
-                                {{--<option value="daylight">Daylight</option>--}}
-                                {{--<option value="cloudy">Cloudy/Overcast</option>--}}
-                                {{--<option value="shade">Shade/Heavily Overcast</option>--}}
-                                {{--</select>--}}
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label class="col-lg-4 control-label">Brightness Estimate</label>
 
@@ -344,16 +305,8 @@
                                         Dark
                                     </label>
                                 </div>
-
-                                {{--<select class="form-control" name="brightness">--}}
-                                {{--<option selected disabled hidden value=''></option>--}}
-                                {{--<option value="2">Bright</option>--}}
-                                {{--<option value="1">Average</option>--}}
-                                {{--<option value="0">Dark</option>--}}
-                                {{--</select>--}}
                             </div>
                         </div>
-
                         <div class="form-group required">
                             <label class="col-lg-4 control-label">Have you seen #TheDress before</label>
 
@@ -374,13 +327,11 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="form-group seen-before-questions required" hidden>
                             <label class="col-lg-4 control-label">What colour was it the first time you
                                 saw it?</label>
 
                             <div class="col-lg-3">
-
                                 <div class="radio">
                                     <label>
                                         <input type="radio" name="first_time_colour" value="blue_black">
@@ -395,15 +346,8 @@
                                         White and Gold
                                     </label>
                                 </div>
-
-                                {{--<select class="form-control" name="first_time_colour">--}}
-                                {{--<option selected disabled hidden value=''></option>--}}
-                                {{--<option value="blue_black">Blue and Black/Brown</option>--}}
-                                {{--<option value="white_gold">White and Gold</option>--}}
-                                {{--</select>--}}
                             </div>
                         </div>
-
                         <div class="form-group seen-before-questions required" hidden>
                             <label class="col-lg-4 control-label">Have the colours ever
                                 changed?</label>
@@ -423,22 +367,13 @@
                                         Yes
                                     </label>
                                 </div>
-
-                                {{--<select class="form-control" name="colours_changed">--}}
-                                {{--<option selected disabled hidden value=''></option>--}}
-                                {{--<option value="0">No</option>--}}
-                                {{--<option value="1">Yes</option>--}}
-                                {{--</select>--}}
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="col-lg-8 col-lg-offset-4">
-                                <a id="thedress" class="btn btn-info" href="/images/the_dress.jpg">Show
-                                    Picture</a>
+                                <a id="thedress" class="btn btn-info" href="/images/the_dress.jpg">Show Picture</a>
                             </div>
                         </div>
-
                         <div class="form-group required final-section" hidden>
                             <label class="col-lg-4 control-label">What colour was the dress?</label>
 
@@ -457,15 +392,8 @@
                                         White and Gold
                                     </label>
                                 </div>
-
-                                {{--<select class="form-control" id="colour_seen" name="colour_seen" disabled>--}}
-                                {{--<option selected disabled value=''>Please view the picture first</option>--}}
-                                {{--<option value="blue_black">Blue and Black/Brown</option>--}}
-                                {{--<option value="white_gold">White and Gold</option>--}}
-                                {{--</select>--}}
                             </div>
                         </div>
-
                         <div class="form-group final-section" hidden>
                             <label class="col-lg-4 control-label"></label>
 
@@ -473,7 +401,6 @@
                                 {!! Recaptcha::render() !!}
                             </div>
                         </div>
-
                         <div class="form-group final-section" hidden>
                             <div class="col-lg-8 col-lg-offset-4">
                                 <button type="submit" class="btn btn-success" id="submit">Submit</button>
@@ -485,7 +412,6 @@
             </div>
         </div>
     </div>
-
     <footer>
         <div class="row">
             <div class="col-lg-12">
@@ -502,11 +428,9 @@
         </div>
     </footer>
 </div>
-
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="/js/jquery.magnific-popup.min.js"></script>
-
 <script>
     $(document).ready(function () {
         $("#banner").height($(window).height());
@@ -522,7 +446,6 @@
             1 == $(this).val() ? $(".seen-before-questions").show() : $(".seen-before-questions").hide()
         });
         $("#flash-overlay-modal").modal()
-
         @if ($errors->any())
         $("html, body").animate({scrollTop: $("#survey").offset().top}, 1E3);
         @endif
