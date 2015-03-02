@@ -5,8 +5,7 @@
     <title>Address #TheDress</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <link href="{{ elixir("css/app.css") }}" rel="stylesheet">
-    <link href="{{asset('css/magnific-popup.css')}}" rel="stylesheet">
+    <link href="{{ elixir("css/all.css") }}" rel="stylesheet">
 
     <style>
         .mfp-bg {
@@ -22,7 +21,6 @@
     <meta name="msapplication-TileColor" content="#FFFFFF"/>
     <meta name="msapplication-TileImage" content="mstile-144x144.png"/>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -91,11 +89,8 @@
                     }(document, 'script', 'twitter-wjs');</script>
             </p>
         </div>
-
     </div>
 
-    <!-- Navbar
-    ================================================== -->
     <div class="bs-docs-section clearfix">
         <div class="row">
             <div class="col-lg-12">
@@ -127,8 +122,7 @@
                             the data collected in this survey will be hosted publicly on the
                             <a href="https://github.com/jcoetzee/addressthedress" target="_blank">Github</a> project,
                             released under the Creative Commons licence. Please grab it, see what you can find, and
-                            share
-                            the results!
+                            share the results!
                         </p>
                     </div>
                 </div>
@@ -154,7 +148,6 @@
                     <fieldset>
                         @if ($errors->any())
                             <ul class="alert alert-danger list-unstyled">
-
                                 @foreach($errors->all() as $error)
                                     <li>{{$error}}</li>
                                 @endforeach
@@ -341,11 +334,13 @@
         <div class="row">
             <div class="col-lg-12">
                 <ul class="list-unstyled">
-                    <li><p><a href="http://addressthedress.com/">AddressTheDress.com</a> © <a
-                                    href="http://www.twitter.com/jonocoetzee" rel="nofollow">Jonathan Coetzee</a></p>
+                    <li>
+                        <p><a href="http://addressthedress.com/">AddressTheDress.com</a> ©
+                            <a href="http://www.twitter.com/jonocoetzee" rel="nofollow">Jonathan Coetzee</a></p>
                     </li>
-                    <li><p>Template by <a href="http://thomaspark.me" rel="nofollow">Thomas Park</a>
-                        </p></li>
+                    <li>
+                        <p>Template by <a href="http://thomaspark.me" rel="nofollow">Thomas Park</a></p>
+                    </li>
                 </ul>
             </div>
         </div>
