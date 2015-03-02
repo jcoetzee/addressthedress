@@ -13,6 +13,7 @@
         .mfp-bg {
             background: {{$colour}};
         }
+
         .mfp-image-holder .mfp-close {
             color: {{$colour === 'white' ? '#000' : '#fff'}};
         }
@@ -175,19 +176,23 @@
                         <div class="form-group required">
                             <label class="col-lg-4 control-label">Left or Right Handed?</label>
 
-                            <div class="col-lg-3">
+                            <div class="col-lg-8">
                                 <div class="radio">
                                     <label>
                                         <input type="radio" name="handedness" value="left">
                                         Left
                                     </label>
                                 </div>
-                            </div>
-                            <div class="col-lg-3">
                                 <div class="radio">
                                     <label>
                                         <input type="radio" name="handedness" value="right">
                                         Right
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="handedness" value="ambidextrous">
+                                        Ambidextrous
                                     </label>
                                 </div>
                             </div>
@@ -331,14 +336,13 @@
                             </div>
                         </div>
                         <div class="form-group seen-before-questions required" hidden>
-                            <label class="col-lg-4 control-label">What colour was it the first time you
-                                saw it?</label>
+                            <label class="col-lg-4 control-label">What colour was it the first time you saw it?</label>
 
                             <div class="col-lg-3">
                                 <div class="radio">
                                     <label>
                                         <input type="radio" name="first_time_colour" value="blue_black">
-                                        Blue and Black or Brown
+                                        Blue and Black/Brown
                                     </label>
                                 </div>
                             </div>
@@ -352,8 +356,7 @@
                             </div>
                         </div>
                         <div class="form-group seen-before-questions required" hidden>
-                            <label class="col-lg-4 control-label">Have the colours ever
-                                changed?</label>
+                            <label class="col-lg-4 control-label">Have the colours ever changed?</label>
 
                             <div class="col-lg-3">
                                 <div class="radio">
@@ -384,7 +387,7 @@
                                 <div class="radio">
                                     <label>
                                         <input type="radio" name="colour_seen" value="blue_black">
-                                        Blue and Black or Brown
+                                        Blue and Black/Brown
                                     </label>
                                 </div>
                             </div>
