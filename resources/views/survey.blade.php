@@ -5,7 +5,7 @@
     <title>Address #TheDress</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <link href="/css/all.css" rel="stylesheet">
+    <link href="{{elixir('css/all.css')}}" rel="stylesheet">
 
     <style>
         .mfp-bg {
@@ -155,13 +155,15 @@
                         <div class="form-group required">
                             <label class="col-lg-4 control-label">Gender</label>
 
-                            <div class="col-lg-8">
+                            <div class="col-lg-3">
                                 <div class="radio">
                                     <label>
                                         <input type="radio" name="gender" value="male">
                                         Male
                                     </label>
                                 </div>
+                            </div>
+                            <div class="col-lg-3">
                                 <div class="radio">
                                     <label>
                                         <input type="radio" name="gender" value="female">
@@ -174,7 +176,7 @@
                         <div class="form-group required">
                             <label class="col-lg-4 control-label">Age</label>
 
-                            <div class="col-lg-8">
+                            <div class="col-lg-3">
                                 <input type="number" class="form-control" name="age" placeholder="Age">
                             </div>
                         </div>
@@ -182,17 +184,19 @@
                         <div class="form-group required">
                             <label class="col-lg-4 control-label">Left or Right Handed?</label>
 
-                            <div class="col-lg-8">
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="handedness" value="right">
-                                        Right
-                                    </label>
-                                </div>
+                            <div class="col-lg-3">
                                 <div class="radio">
                                     <label>
                                         <input type="radio" name="handedness" value="left">
                                         Left
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="handedness" value="right">
+                                        Right
                                     </label>
                                 </div>
                             </div>
@@ -201,33 +205,120 @@
                         <div class="form-group">
                             <label class="col-lg-4 control-label">Eye Colour</label>
 
-                            <div class="col-lg-8">
-                                <select class="form-control" name="eye_colour">
-                                    <option selected disabled hidden value=''></option>
-                                    <option value="brown">Brown</option>
-                                    <option value="hazel">Hazel</option>
-                                    <option value="blue">Blue</option>
-                                    <option value="green">Green</option>
-                                    <option value="grey">Grey</option>
-                                    <option value="amber">Amber</option>
-                                    <option value="other">Other</option>
-                                </select>
+                            <div class="col-lg-3">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="eye_colour" value="brown">
+                                        Brown
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="eye_colour" value="hazel">
+                                        Hazel
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="eye_colour" value="blue">
+                                        Blue
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="eye_colour" value="green">
+                                        Green
+                                    </label>
+                                </div>
                             </div>
+                            <div class="col-lg-3">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="eye_colour" value="grey">
+                                        Grey
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="eye_colour" value="amber">
+                                        Amber
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="eye_colour" value="other">
+                                        Other
+                                    </label>
+                                </div>
+                            </div>
+
+                            {{--<div class="col-lg-8">--}}
+                            {{--<select class="form-control" name="eye_colour">--}}
+                            {{--<option selected disabled hidden value=''></option>--}}
+                            {{--<option value="brown">Brown</option>--}}
+                            {{--<option value="hazel">Hazel</option>--}}
+                            {{--<option value="blue">Blue</option>--}}
+                            {{--<option value="green">Green</option>--}}
+                            {{--<option value="grey">Grey</option>--}}
+                            {{--<option value="amber">Amber</option>--}}
+                            {{--<option value="other">Other</option>--}}
+                            {{--</select>--}}
+                            {{--</div>--}}
                         </div>
 
                         <div class="form-group">
                             <label class="col-lg-4 control-label">Current Room Light Source</label>
 
-                            <div class="col-lg-8">
-                                <select class="form-control" name="light_source">
-                                    <option selected disabled hidden value=''></option>
-                                    <option value="sunrise">Sunrise/Sunset</option>
-                                    <option value="incandescent">Incandescent/Tungsten/Soft CCFL</option>
-                                    <option value="florescent">Cool White CCFL/Florescent</option>
-                                    <option value="daylight">Daylight</option>
-                                    <option value="cloudy">Cloudy/Overcast</option>
-                                    <option value="shade">Shade/Heavily Overcast</option>
-                                </select>
+                            <div class="col-lg-3">
+
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="light_source" value="sunrise">
+                                        Sunrise or Sunset
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="light_source" value="incandescent">
+                                        Incandescent, Tungsten or Soft CCFL
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="light_source" value="florescent">
+                                        Cool White CCFL or Florescent
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="light_source" value="daylight">
+                                        Daylight
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="light_source" value="cloudy">
+                                        Cloudy or Overcast
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="light_source" value="shade">
+                                        Shade or Heavily Overcast
+                                    </label>
+                                </div>
+
+                                {{--<select class="form-control" name="light_source">--}}
+                                {{--<option selected disabled hidden value=''></option>--}}
+                                {{--<option value="sunrise">Sunrise/Sunset</option>--}}
+                                {{--<option value="incandescent">Incandescent/Tungsten/Soft CCFL</option>--}}
+                                {{--<option value="florescent">Cool White CCFL/Florescent</option>--}}
+                                {{--<option value="daylight">Daylight</option>--}}
+                                {{--<option value="cloudy">Cloudy/Overcast</option>--}}
+                                {{--<option value="shade">Shade/Heavily Overcast</option>--}}
+                                {{--</select>--}}
                             </div>
                         </div>
 
@@ -235,25 +326,46 @@
                             <label class="col-lg-4 control-label">Brightness Estimate</label>
 
                             <div class="col-lg-8">
-                                <select class="form-control" name="brightness">
-                                    <option selected disabled hidden value=''></option>
-                                    <option value="2">Bright</option>
-                                    <option value="1">Average</option>
-                                    <option value="0">Dark</option>
-                                </select>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="brightness" value="2">
+                                        Bright
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="brightness" value="1">
+                                        Average
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="brightness" value="0">
+                                        Dark
+                                    </label>
+                                </div>
+
+                                {{--<select class="form-control" name="brightness">--}}
+                                {{--<option selected disabled hidden value=''></option>--}}
+                                {{--<option value="2">Bright</option>--}}
+                                {{--<option value="1">Average</option>--}}
+                                {{--<option value="0">Dark</option>--}}
+                                {{--</select>--}}
                             </div>
                         </div>
 
                         <div class="form-group required">
                             <label class="col-lg-4 control-label">Have you seen #TheDress before</label>
 
-                            <div class="col-lg-8">
+                            <div class="col-lg-3">
                                 <div class="radio">
                                     <label>
                                         <input type="radio" name="seen_before" value="0">
                                         No
                                     </label>
                                 </div>
+                            </div>
+                            <div class="col-lg-3">
                                 <div class="radio">
                                     <label>
                                         <input type="radio" name="seen_before" value="1">
@@ -267,12 +379,28 @@
                             <label class="col-lg-4 control-label">What colour was it the first time you
                                 saw it?</label>
 
-                            <div class="col-lg-8">
-                                <select class="form-control" name="first_time_colour">
-                                    <option selected disabled hidden value=''></option>
-                                    <option value="blue_black">Blue and Black/Brown</option>
-                                    <option value="white_gold">White and Gold</option>
-                                </select>
+                            <div class="col-lg-3">
+
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="first_time_colour" value="blue_black">
+                                        Blue and Black or Brown
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="first_time_colour" value="white_gold">
+                                        White and Gold
+                                    </label>
+                                </div>
+
+                                {{--<select class="form-control" name="first_time_colour">--}}
+                                {{--<option selected disabled hidden value=''></option>--}}
+                                {{--<option value="blue_black">Blue and Black/Brown</option>--}}
+                                {{--<option value="white_gold">White and Gold</option>--}}
+                                {{--</select>--}}
                             </div>
                         </div>
 
@@ -280,12 +408,27 @@
                             <label class="col-lg-4 control-label">Have the colours ever
                                 changed?</label>
 
-                            <div class="col-lg-8">
-                                <select class="form-control" name="colours_changed">
-                                    <option selected disabled hidden value=''></option>
-                                    <option value="0">No</option>
-                                    <option value="1">Yes</option>
-                                </select>
+                            <div class="col-lg-3">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="colours_changed" value="0">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="colours_changed" value="1">
+                                        Yes
+                                    </label>
+                                </div>
+
+                                {{--<select class="form-control" name="colours_changed">--}}
+                                {{--<option selected disabled hidden value=''></option>--}}
+                                {{--<option value="0">No</option>--}}
+                                {{--<option value="1">Yes</option>--}}
+                                {{--</select>--}}
                             </div>
                         </div>
 
@@ -296,19 +439,34 @@
                             </div>
                         </div>
 
-                        <div class="form-group required">
+                        <div class="form-group required final-section" hidden>
                             <label class="col-lg-4 control-label">What colour was the dress?</label>
 
-                            <div class="col-lg-8">
-                                <select class="form-control" id="colour_seen" name="colour_seen" disabled>
-                                    <option selected disabled value=''>Please view the picture first</option>
-                                    <option value="blue_black">Blue and Black/Brown</option>
-                                    <option value="white_gold">White and Gold</option>
-                                </select>
+                            <div class="col-lg-3">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="colour_seen" value="blue_black">
+                                        Blue and Black or Brown
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="colour_seen" value="white_gold">
+                                        White and Gold
+                                    </label>
+                                </div>
+
+                                {{--<select class="form-control" id="colour_seen" name="colour_seen" disabled>--}}
+                                {{--<option selected disabled value=''>Please view the picture first</option>--}}
+                                {{--<option value="blue_black">Blue and Black/Brown</option>--}}
+                                {{--<option value="white_gold">White and Gold</option>--}}
+                                {{--</select>--}}
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group final-section" hidden>
                             <label class="col-lg-4 control-label"></label>
 
                             <div class="col-lg-8 col-lg-offset-4">
@@ -316,9 +474,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group final-section" hidden>
                             <div class="col-lg-8 col-lg-offset-4">
-                                <button type="submit" class="btn btn-success" id="submit" disabled>Submit</button>
+                                <button type="submit" class="btn btn-success" id="submit">Submit</button>
                             </div>
                         </div>
                     </fieldset>
@@ -356,11 +514,8 @@
             var a = $("#thedress");
             a.magnificPopup({type: "image", closeOnContentClick: !0});
             a.click(function () {
-                var a = $("#colour_seen"), b = a.find("option:first");
-                b.text("");
-                b.prop("hidden", !0);
-                a.prop("disabled", !1);
-                $("#submit").prop("disabled", !1)
+                $(".final-section").show();
+                a.closest('.form-group').remove();
             })
         })();
         $("input[name$='seen_before']").click(function () {

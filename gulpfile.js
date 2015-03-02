@@ -12,16 +12,16 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.styles(["app.css", "magnific-popup.css"])
-        .version("css/all.css")
-        .scripts(["jquery.magnific-popup.min.js"]);
-
-    //mix.less('app.less')
-    //    .copy('public/css/app.css', 'resources/css/app.css')
-    //    .styles([
-    //        'app.css',
-    //        'magnific-popup.css'
-    //    ])
+    //mix.styles(["app.css", "magnific-popup.css"])
     //    .version("css/all.css")
-    //    .scripts(["bootstrap.js", "jquery.magnific-popup.min.js"]);
+    //    .scripts(["jquery.magnific-popup.min.js"]);
+
+    mix.less('app.less')
+        .copy('public/css/app.css', 'resources/css/app.css')
+        .styles([
+            'app.css',
+            'magnific-popup.css'
+        ])
+        .version("css/all.css")
+        .scripts(["bootstrap.js", "jquery.magnific-popup.min.js"]);
 });
