@@ -13,6 +13,9 @@
         .mfp-bg {
             background: {{$colour}};
         }
+        .mfp-image-holder .mfp-close {
+            color: {{$colour === 'white' ? '#000' : '#fff'}};
+        }
     </style>
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png"/>
