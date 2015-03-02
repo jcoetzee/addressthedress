@@ -367,7 +367,12 @@
         });
 
         theDress.click(function () {
-            $('#colour_seen').prop('disabled', false);
+            var colourSeen = $('#colour_seen'), placeholder = colourSeen.find('option:first');
+            
+            placeholder.text('');
+            placeholder.prop('hidden', true);
+
+            colourSeen.prop('disabled', false);
             $('#submit').prop('disabled', false);
         });
 
