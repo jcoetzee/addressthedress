@@ -126,7 +126,8 @@
                             process of teaching myself. I have a small set of skills available to me at the moment. All
                             the data collected in this survey will be hosted publicly on the
                             <a href="https://github.com/jcoetzee/addressthedress" target="_blank">Github</a> project,
-                            released under the Creative Commons licence. Please grab it, see what you can find, and share
+                            released under the Creative Commons licence. Please grab it, see what you can find, and
+                            share
                             the results!
                         </p>
                     </div>
@@ -308,14 +309,14 @@
 
                             <div class="col-lg-8">
                                 <select class="form-control" id="colour_seen" name="colour_seen" disabled>
-                                    <option selected disabled hidden value=''></option>
+                                    <option selected disabled value=''>Please view the picture first</option>
                                     <option value="blue_black">Blue and Black/Brown</option>
                                     <option value="white_gold">White and Gold</option>
                                 </select>
                             </div>
                         </div>
 
-                        <div class="form-group required">
+                        <div class="form-group">
                             <label class="col-lg-4 control-label"></label>
 
                             <div class="col-lg-8 col-lg-offset-4">
@@ -362,7 +363,7 @@
         var theDress = $('#thedress');
         theDress.magnificPopup({
             type: 'image',
-            background: "#fff"
+            closeOnContentClick: true
         });
 
         theDress.click(function () {
