@@ -23,5 +23,5 @@ elixir(function(mix) {
             'magnific-popup.css'
         ])
         .version("css/all.css")
-        .scripts(["bootstrap.js", "jquery.magnific-popup.min.js"]);
+        .scripts(["jquery.magnific-popup.min.js"]);
 });
