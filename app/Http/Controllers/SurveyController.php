@@ -5,6 +5,7 @@ use App\LightSource;
 use App\SurveyResponse;
 use Flash;
 use Session;
+use Cache;
 
 class SurveyController extends Controller
 {
@@ -41,7 +42,11 @@ class SurveyController extends Controller
 
         $response = new SurveyResponse(array_add($input, 'background_colour', Session::get('colour')));
 
-        $response->lightSource()->associate(LightSource::where('name', $request->get('light_source'))->firstOrFail());
+        $lightSources = Cache::rememberForever('users', function () {
+            return LightSource::all();
+        });
+
+        $response->lightSource()->associate($lightSources->where('name', $request->get('light_source'))->first());
 
         $response->save();
 
