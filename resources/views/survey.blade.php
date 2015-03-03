@@ -95,7 +95,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="page-header">
-                    <h2>About</h2>
+                    <h2 id="about">About</h2>
                 </div>
                 <div class="bs-component">
                     <div class="col-lg-9">
@@ -451,13 +451,16 @@
             a.magnificPopup({type: "image", closeOnContentClick: !0});
             a.click(function () {
                 $(".final-section").show();
-                a.closest('.form-group').remove();
-            })
+                a.closest(".form-group").remove();
+            });
         })();
-        $("input[name$='seen_before']").click(function () {
-            1 == $(this).val() ? $(".seen-before-questions").show() : $(".seen-before-questions").hide()
+        $("#scroll_down").click(function () {
+            $("html, body").animate({scrollTop: $("#about").offset().top}, 1E3);
         });
-        $("#flash-overlay-modal").modal()
+        $("input[name$='seen_before']").click(function () {
+            1 == $(this).val() ? $(".seen-before-questions").show() : $(".seen-before-questions").hide();
+        });
+        $("#flash-overlay-modal").modal();
         @if ($errors->any())
         $("html, body").animate({scrollTop: $("#survey").offset().top}, 1E3);
         @endif
