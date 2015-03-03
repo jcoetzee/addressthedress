@@ -382,7 +382,10 @@
                                 <a id="thedress" class="btn btn-info" href="/images/the_dress.jpg">Show Picture</a>
                             </div>
                         </div>
-                        <div class="form-group required final-section" hidden>
+                        <div class="form-group" id="continue_message">
+                            <label class="col-lg-8 col-lg-offset-4">Click 'Show Picture' to continue</label>
+                        </div>
+                        <div class="form-group required final-section alert alert-success" hidden>
                             <label class="col-lg-4 control-label">What colour was the dress?</label>
 
                             <div class="col-lg-3">
@@ -452,6 +455,7 @@
             a.click(function () {
                 $(".final-section").show();
                 a.closest(".form-group").remove();
+                $('#continue_message').remove();
             });
         })();
         $("#scroll_down").click(function () {
