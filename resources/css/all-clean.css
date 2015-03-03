@@ -731,7 +731,7 @@ body {
 }
 
 #banner {
-  min-height: 300px;
+  min-height: 9999px;
   border-bottom: none;
 }
 
@@ -1066,6 +1066,17 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px;
   }
+}
+
+#scroll_down {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    width: 5%;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
 }
 
 /*# sourceMappingURL=all.css.map */

@@ -8,7 +8,7 @@
     <meta name="description" content="Finding reasons why #TheDress is both #BlackAndBlue and #WhiteAndGold">
     <meta name="keywords" content="#TheDress,#BlackAndBlue,#WhiteAndGold,Survey,Data Science">
     <meta name="author" content="Jonathan Coetzee">
-    <link href="/build/css/all-f601e262.css" rel="stylesheet">
+    <link href="/build/css/all-65c28513.css" rel="stylesheet">
     <style>
         .mfp-bg {
             background: {{$colour}};
@@ -87,6 +87,8 @@
                         }
                     }(document, 'script', 'twitter-wjs');</script>
             </p>
+
+            <img id="scroll_down" src="/images/scroll_down.png">
         </div>
     </div>
     <div class="bs-docs-section clearfix">
@@ -439,9 +441,13 @@
 <script src="/js/jquery.magnific-popup.min.js"></script>
 <script>
     $(document).ready(function () {
-        $("#banner").height($(window).height());
         (function () {
-            var a = $("#thedress");
+            var a = $("#thedress"), b = $("#banner");
+            b.height($(window).height());
+            b.css("min-height", "0");
+            $(window).resize(function () {
+                b.height($(window).height());
+            });
             a.magnificPopup({type: "image", closeOnContentClick: !0});
             a.click(function () {
                 $(".final-section").show();
