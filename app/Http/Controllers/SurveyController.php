@@ -38,11 +38,9 @@ class SurveyController extends Controller
 
     public function post(CreateResponseRequest $request)
     {
-        $input = $request->except('_token', 'light_source', 'g-recaptcha-response');
+        $response = new SurveyResponse(array_add($request->all(), 'background_colour', Session::get('colour')));
 
-        $response = new SurveyResponse(array_add($input, 'background_colour', Session::get('colour')));
-
-        $lightSources = Cache::rememberForever('users', function () {
+        $lightSources = Cache::rememberForever('LightSources', function () {
             return LightSource::all();
         });
 
