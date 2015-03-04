@@ -3,9 +3,9 @@
 use App\Http\Requests\CreateResponseRequest;
 use App\LightSource;
 use App\SurveyResponse;
+use Cache;
 use Flash;
 use Session;
-use Cache;
 
 class SurveyController extends Controller
 {
@@ -44,7 +44,9 @@ class SurveyController extends Controller
             return LightSource::all();
         });
 
-        $response->lightSource()->associate($lightSources->where('name', $request->get('light_source'))->first());
+        if ($request->has('light_source')) {
+            $response->lightSource()->associate($lightSources->where('name', $request->get('light_source'))->first());
+        }
 
         $response->save();
 
