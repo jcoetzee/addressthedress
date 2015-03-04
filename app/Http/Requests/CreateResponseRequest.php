@@ -22,7 +22,7 @@ class CreateResponseRequest extends Request
      */
     public function rules()
     {
-        $rules = [
+        return $rules = [
             'gender' => ['required', 'in:male,female'],
             'age' => ['required', 'integer', 'min:0', 'max:150'],
             'handedness' => ['required', 'in:left,right,ambidextrous'],
@@ -32,14 +32,9 @@ class CreateResponseRequest extends Request
             'seen_before' => ['required', 'integer', 'min:0', 'max:1'],
             'first_time_colour' => ['in:blue_black,white_gold'],
             'colours_changed' => ['integer', 'min:0', 'max:1'],
-            'colour_seen' => ['required', 'in:blue_black,white_gold']
+            'colour_seen' => ['required', 'in:blue_black,white_gold'],
+            'g-recaptcha-response' => ['required', 'recaptcha']
         ];
-
-        if (App::environment() === 'production') {
-            array_add($rules, 'g-recaptcha-response', ['required', 'recaptcha']);
-        }
-
-        return $rules;
     }
 
 }

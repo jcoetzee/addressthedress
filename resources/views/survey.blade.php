@@ -8,7 +8,7 @@
     <meta name="description" content="Finding reasons why #TheDress is both #BlackAndBlue and #WhiteAndGold">
     <meta name="keywords" content="#TheDress,#BlackAndBlue,#WhiteAndGold,Survey,Data Science">
     <meta name="author" content="Jonathan Coetzee">
-    <link href="/build/css/all-65c28513.css" rel="stylesheet">
+    <link href="/build/css/all-6d82735b.css" rel="stylesheet">
     <style>
         .mfp-bg {
             background: {{$colour}};

@@ -6770,5 +6770,17 @@ footer {
 .stHBubble {
   height: 22px !important;
 }
+#scroll_down {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 5%;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
 
 /*# sourceMappingURL=app.css.map */
