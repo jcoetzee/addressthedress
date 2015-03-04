@@ -13,7 +13,8 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.styles(["all-clean.css"])
-        .version("css/all.css");
+        .version("css/all.css")
+        .scripts(["jquery.magnific-popup.min.js", "suncalc.js"]);
 
     //mix.less('app.less')
     //    .copy('public/css/app.css', 'resources/css/app.css')

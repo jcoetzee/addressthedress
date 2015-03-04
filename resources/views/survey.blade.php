@@ -250,6 +250,14 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label class="col-lg-4 control-label">Time of Day (Sun Position)</label>
+
+                            <div class="col-lg-8" id="location">
+                                <label class="control-label" hidden>Sun Location</label>
+                                <a class="btn btn-info">Get</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label class="col-lg-4 control-label">Current Room Light Source</label>
 
                             <div class="col-lg-3">
@@ -441,33 +449,47 @@
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/all.js"></script>
 <script>
     $(document).ready(function () {
         (function () {
-            var a = $("#thedress"), b = $("#banner");
-            b.height($(window).height());
-            b.css("min-height", "0");
+            var e = $("#thedress"), f = $("#banner"), d = $("#location"), c = function (a, b) {
+                d.find("label").text(a);
+                d.find("a").hide();
+                d.find("label").show();
+                b && $("<input>").attr({type: "hidden", value: b, name: "time_of_day"}).appendTo(d);
+            };
+            f.height($(window).height());
+            f.css("min-height", "0");
             $(window).resize(function () {
-                b.height($(window).height());
+                f.height($(window).height());
             });
-            a.magnificPopup({type: "image", closeOnContentClick: !0});
-            a.click(function () {
+            e.magnificPopup({type: "image", closeOnContentClick: !0});
+            e.click(function () {
                 $(".final-section").show();
-                a.closest(".form-group").remove();
-                $('#continue_message').remove();
+                e.closest(".form-group").remove();
+                $("#continue_message").remove();
             });
+            navigator.geolocation ? d.find("a").click(function () {
+                c("locating...", null);
+                navigator.geolocation.getCurrentPosition(function (a) {
+                    var b = new Date;
+                    a = SunCalc.getTimes(b, a.coords.latitude, a.coords.longitude);
+                    return b <= a.dawn ? c("Night", "night") : b <= a.sunrise ? c("Dawn", "dawn") :  b <= a.sunriseEnd ? c("Sunrise", "sunrise") : b <= a.goldenHourEnd ? c("Morning Golden Hour", "am_golden_hour") : b <= a.goldenHour ? c("Day", "day") : b <= a.sunset ? c("Evening Golden Hour", "pm_golden_hour") : b <= a.dusk ? c("Sunset", "sunset") : b <= a.night ? c("Dusk", "dusk") : c("Night", "night");
+                });
+            }) : d.closest("form-group").remove();
         })();
+        @if ($errors->any())
+        $("html, body").animate({scrollTop: $("#survey").offset().top}, 1E3);
+        @endif
+
+        $("#flash-overlay-modal").modal();
         $("#scroll_down").click(function () {
             $("html, body").animate({scrollTop: $("#about").offset().top}, 1E3);
         });
         $("input[name$='seen_before']").click(function () {
             1 == $(this).val() ? $(".seen-before-questions").show() : $(".seen-before-questions").hide();
         });
-        $("#flash-overlay-modal").modal();
-        @if ($errors->any())
-        $("html, body").animate({scrollTop: $("#survey").offset().top}, 1E3);
-        @endif
     });
 </script>
 </body>

@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class SurveyResponse extends Model
 {
 
-    protected $fillable = ['age', 'gender', 'eye_colour', 'handedness', 'brightness', 'seen_before', 'first_time_colour',
+    protected $fillable = ['age', 'gender', 'eye_colour', 'handedness', 'time_of_day', 'brightness', 'seen_before', 'first_time_colour',
         'colours_changed', 'colour_seen', 'background_colour'];
 
     protected $casts = [
