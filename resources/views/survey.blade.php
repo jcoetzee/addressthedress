@@ -8,7 +8,7 @@
     <meta name="description" content="Finding reasons why #TheDress is both #BlackAndBlue and #WhiteAndGold">
     <meta name="keywords" content="#TheDress,#BlackAndBlue,#WhiteAndGold,Survey,Data Science">
     <meta name="author" content="Jonathan Coetzee">
-    <link href="/build/css/all-df896fb2.css" rel="stylesheet">
+    <link href="/build/css/all-fabcfc93.css" rel="stylesheet">
     <style>
         .mfp-bg {
             background: {{$colour}};
@@ -253,7 +253,7 @@
                             <label class="col-lg-4 control-label">Time of Day (Sun Position)</label>
 
                             <div class="col-lg-8" id="location">
-                                <label class="control-label" hidden>Sun Location</label>
+                                <label class="control-label" hidden><strong></strong></label>
                                 <a class="btn btn-info">Get</a>
                             </div>
                         </div>
@@ -454,7 +454,7 @@
     $(document).ready(function () {
         (function () {
             var e = $("#thedress"), f = $("#banner"), d = $("#location"), c = function (a, b) {
-                d.find("label").text(a);
+                d.find("strong").text(a);
                 d.find("a").hide();
                 d.find("label").show();
                 b && $("<input>").attr({type: "hidden", value: b, name: "time_of_day"}).appendTo(d);
