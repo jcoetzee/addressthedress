@@ -114,6 +114,9 @@
                             between the questions below and the colours perceived, we will still have learnt something,
                             as we will then know to look elsewhere.</p>
 
+                        <p>Please note that your location is <strong>only</strong> required in order to calculate the position of the sun
+                            at your location and is not sent back to the sever at all.</p>
+
                         <p><strong>To data scientists:</strong></p>
 
                         <p>I am not a data scientist, although it is a field I'm trying hard to get into and in the
@@ -475,7 +478,7 @@
                 navigator.geolocation.getCurrentPosition(function (a) {
                     var b = new Date;
                     a = SunCalc.getTimes(b, a.coords.latitude, a.coords.longitude);
-                    return b <= a.dawn ? c("Night", "night") : b <= a.sunrise ? c("Dawn", "dawn") :  b <= a.sunriseEnd ? c("Sunrise", "sunrise") : b <= a.goldenHourEnd ? c("Morning Golden Hour", "am_golden_hour") : b <= a.goldenHour ? c("Day", "day") : b <= a.sunset ? c("Evening Golden Hour", "pm_golden_hour") : b <= a.dusk ? c("Sunset", "sunset") : b <= a.night ? c("Dusk", "dusk") : c("Night", "night");
+                    return b <= a.dawn ? c("Night", "night") : b <= a.sunrise ? c("Dawn", "dawn") : b <= a.sunriseEnd ? c("Sunrise", "sunrise") : b <= a.goldenHourEnd ? c("Morning Golden Hour", "am_golden_hour") : b <= a.goldenHour ? c("Day", "day") : b <= a.sunset ? c("Evening Golden Hour", "pm_golden_hour") : b <= a.dusk ? c("Sunset", "sunset") : b <= a.night ? c("Dusk", "dusk") : c("Night", "night");
                 });
             }) : d.closest("form-group").remove();
         })();
