@@ -61,9 +61,7 @@
         <div class="row">
             <h1>Address #TheDress</h1>
 
-            <p class="lead">Some are <a href="https://twitter.com/hashtag/TeamBlackAndBlue" target="_blank">#TeamBlackAndBlue</a>
-                others are <a href="https://twitter.com/hashtag/TeamBlackAndBlue" target="_blank">#TeamWhiteAndGold</a>.
-            </p>
+            <p class="lead">Some are #TeamBlackAndBlue others are #TeamWhiteAndGold.</p>
 
             <p class="lead"><strong>I want to find out why!</strong></p>
 
