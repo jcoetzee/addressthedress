@@ -97,33 +97,31 @@
                 </div>
                 <div class="bs-component">
                     <div class="col-lg-9">
-                        <p>You may or may not have been completely bombarded with a picture of a certain dress that has
-                            been making the rounds on Twitter and the Internet in general, if you have then please stay
-                            with me for just a few minutes longer. If you have no idea what I’m talking about then this
-                            is actually a good thing since you wont have a bias or presupposition of what you should
-                            see.</p>
+                        <p>You've probably been completely bombarded on Twitter and the internet with the picture of a
+                            certain dress.</p>
 
-                        <p>My name is Jonathan Coetzee. I am an aspiring Data Scientist and I’m very curious as to why
-                            two people can see such different colours when looking at the same picture. This curiosity
-                            is the reason why I made this site. Here I hope to obtain enough data from many different
-                            people in the hopes of finding patterns that make people’s brains “fix” the colours one way
-                            or the other. I am no neuroscientist however; the cause of the phenomenon may be entirely
-                            dependent on the wiring of our individual brains. Even if we find no conclusive correlations
-                            between the questions below and the colours perceived, we will still have learnt something,
-                            as we will then know to look elsewhere.</p>
+                        <p>I was fascinated with how two people could see the same thing completely differently and
+                            would love to know why. As an aspiring big data scientist I'm hoping to find patterns and
+                            answers and I need your help.</p>
 
-                        <p>Please note that your location is <strong>only</strong> required in order to calculate the position of the sun
+                        <p>Give it a couple minutes more of your attention, and help me understand this interesting
+                            phenomenon beyond the initial interpretations. Just fill out the short survey below and
+                            consider sharing it with friends.</p>
+
+                        <p>If you have no idea what I’m talking about, that's a good thing, since you won't have a bias
+                            or presupposition of what you should see.</p>
+
+                        <p>Please note that your location is only required in order to calculate the position of the sun
                             at your location and is not sent back to the sever at all.</p>
 
                         <p><strong>To data scientists:</strong></p>
 
-                        <p>I am not a data scientist, although it is a field I'm trying hard to get into and in the
-                            process of teaching myself. I have a small set of skills available to me at the moment. All
-                            the data collected in this survey will be hosted publicly on the
-                            <a href="https://github.com/jcoetzee/addressthedress" target="_blank">Github</a> project,
-                            released under the Creative Commons licence. Please grab it, see what you can find, and
-                            share the results!
-                        </p>
+                        <p>My name is Jonathan Coetzee and I'm working towards becoming a professional data scientist.
+                            Contact me if you'd like to collaborate.</p>
+
+                        <p>All the data collected in this survey will be hosted publicly on the Github project, released
+                            under the Creative Commons licence. Please grab it, see what you can find, and share the
+                            results!</p>
                     </div>
                 </div>
             </div>
